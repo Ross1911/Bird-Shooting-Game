@@ -1,1 +1,0 @@
-# Bird-Shooting-Game
