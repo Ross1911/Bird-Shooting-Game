@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bird Shooting Game</title>
+  <style>
+    body {
+      background: #16064e;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 50px;
+    }
+    .btn {
+      font-size:1.5em;
+      padding: 15px 30px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #4bb62e;
+    }
+    /* Initially hide the game container */
+    #gameContainer {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Bird Shooting Game</h1>
+    <p>Experience the thrill of Bird shooting!</p>
+    <!-- This button will show the game embedded on the same page -->
+    
+    <!-- Game container with an iframe embedding the pygbag build -->
+    <div id="gameContainer">
+      <iframe
+        id="gameFrame" 
+        src= "game/index.html" 
+        width="800" 
+        height="690" 
+        style="border: none;">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // When the user clicks the button, show the game container
+    document.getElementById("startGameButton").addEventListener("click", function() {
+      document.getElementById("gameContainer").style.display = "block";
+      // Optionally hide the start button once the game is shown
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+
+
